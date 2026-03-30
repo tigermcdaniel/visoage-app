@@ -1,7 +1,9 @@
+"use client"
+
 import { AppShell } from "@/components/app-shell"
-import { ChevronRight, User, Shield, FileText, Settings } from "lucide-react"
-import Image from "next/image"
+import { ChevronRight, User, Shield, FileText, Settings, LogOut } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 const reports = [
   { id: "084", date: "October 12, 2023", score: 94 },
@@ -25,7 +27,13 @@ const settingsLinks = [
 ]
 
 export default function ProfilePage() {
+  const router = useRouter()
   const maxScore = Math.max(...skinJourneyData.map(d => d.score))
+
+  const handleLogout = () => {
+    localStorage.removeItem("glowtrack-onboarded")
+    router.push("/")
+  }
 
   return (
     <AppShell>
@@ -177,6 +185,18 @@ export default function ProfilePage() {
                 </Link>
               )
             })}
+            <button
+              onClick={handleLogout}
+              className="w-full flex items-center justify-between px-5 py-4 rounded-[1.5rem] hover:bg-destructive/10 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <LogOut className="h-5 w-5 text-destructive" />
+                <span className="text-[11px] uppercase tracking-widest font-bold text-destructive">
+                  Sign Out
+                </span>
+              </div>
+              <ChevronRight className="h-5 w-5 text-destructive/30 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </section>
       </div>

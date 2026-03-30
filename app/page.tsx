@@ -1,8 +1,12 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { AppShell } from "@/components/app-shell"
 import { SkinScoreCard } from "@/components/skin-score-card"
 import { CheckInCountdown } from "@/components/check-in-countdown"
 import { ProgressSparkline } from "@/components/progress-sparkline"
 import { RoutinePreview } from "@/components/routine-preview"
+import LandingPage from "./landing/page"
 
 // Mock data - in production this would come from a database
 const mockData = {
@@ -38,8 +42,25 @@ const mockData = {
 }
 
 export default function DashboardPage() {
+  const [hasOnboarded, setHasOnboarded] = useState<boolean | null>(null)
   const currentHour = new Date().getHours()
   const greeting = currentHour < 12 ? "Good morning" : currentHour < 18 ? "Good afternoon" : "Good evening"
+
+  useEffect(() => {
+    // Check if user has completed onboarding
+    const onboarded = localStorage.getItem("glowtrack-onboarded")
+    setHasOnboarded(onboarded === "true")
+  }, [])
+
+  // Show loading state while checking
+  if (hasOnboarded === null) {
+    return null
+  }
+
+  // Show landing page for new users
+  if (!hasOnboarded) {
+    return <LandingPage />
+  }
 
   return (
     <AppShell>
