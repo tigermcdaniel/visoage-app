@@ -1,0 +1,154 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* GlowTrack Design System */
+  --background: #f8faf9;
+  --foreground: #191c1c;
+  --card: #ffffff;
+  --card-foreground: #191c1c;
+  --popover: #ffffff;
+  --popover-foreground: #191c1c;
+  --primary: #4e635a;
+  --primary-foreground: #ffffff;
+  --secondary: #516169;
+  --secondary-foreground: #ffffff;
+  --muted: #eceeed;
+  --muted-foreground: #424845;
+  --accent: #8da399;
+  --accent-foreground: #263932;
+  --destructive: #ba1a1a;
+  --destructive-foreground: #ffffff;
+  --border: #c2c8c4;
+  --input: #e1e3e2;
+  --ring: #4e635a;
+  
+  /* Extended palette */
+  --surface: #f8faf9;
+  --surface-container: #eceeed;
+  --surface-container-low: #f2f4f3;
+  --surface-container-high: #e6e9e8;
+  --surface-container-lowest: #ffffff;
+  --primary-container: #8da399;
+  --primary-fixed: #d1e8dd;
+  --tertiary: #755755;
+  --tertiary-container: #b99693;
+  --outline: #727875;
+  --outline-variant: #c2c8c4;
+  
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #191c1c;
+  --foreground: #e1e3e2;
+  --card: #2e3131;
+  --card-foreground: #e1e3e2;
+  --popover: #2e3131;
+  --popover-foreground: #e1e3e2;
+  --primary: #b5ccc1;
+  --primary-foreground: #1e3229;
+  --secondary: #b9c9d3;
+  --secondary-foreground: #233239;
+  --muted: #424845;
+  --muted-foreground: #c2c8c4;
+  --accent: #8da399;
+  --accent-foreground: #ffffff;
+  --destructive: #ffb4ab;
+  --destructive-foreground: #690005;
+  --border: #424845;
+  --input: #424845;
+  --ring: #b5ccc1;
+  
+  --surface: #191c1c;
+  --surface-container: #2e3131;
+  --surface-container-low: #242727;
+  --surface-container-high: #393c3c;
+  --surface-container-lowest: #0e1111;
+  --primary-container: #374b43;
+  --primary-fixed: #b5ccc1;
+  --tertiary: #e4beba;
+  --tertiary-container: #5b403e;
+  --outline: #8c9290;
+  --outline-variant: #424845;
+}
+
+@theme inline {
+  --font-sans: 'Manrope', sans-serif;
+  --font-serif: 'Newsreader', serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-primary-container: var(--primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* iOS-style safe areas */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Smooth scrolling for iOS */
+.scroll-smooth {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
