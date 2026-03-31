@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { ArrowLeft, Search, ScanBarcode, Droplets, FlaskConical, Sparkles, Sun, X, Plus } from "lucide-react"
+import { OnboardingProgress } from "@/components/onboarding-progress"
 
 const categories = [
   { id: "cleansers", name: "Cleansers", icon: Droplets },
@@ -221,9 +222,9 @@ export default function CabinetStep() {
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Back</span>
           </button>
-          <p className="text-center mt-2 text-muted-foreground text-[10px] uppercase tracking-widest">
-            Step 4 of 4 • Build Your Cabinet
-          </p>
+          <div className="mt-3">
+            <OnboardingProgress currentStep={4} />
+          </div>
         </div>
       </div>
     </div>

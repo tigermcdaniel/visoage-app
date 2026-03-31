@@ -45,7 +45,7 @@ export default function LandingPage() {
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-muted" style={{ position: 'relative' }}>
+              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-muted relative">
                 <Image
                   src="/images/hero-skin.jpg"
                   alt="Radiant skin"

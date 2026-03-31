@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Camera, ArrowLeft, ScanFace, Zap, RotateCcw, Check } from "lucide-react"
+import { OnboardingProgress } from "@/components/onboarding-progress"
 
 export default function ScanStep() {
   const router = useRouter()
@@ -214,9 +215,9 @@ export default function ScanStep() {
               <span className="text-sm">Back to Home</span>
             </button>
           )}
-          <p className="text-center mt-3 text-muted-foreground text-[10px] uppercase tracking-widest">
-            Step 1 of 4 • Skin Analysis
-          </p>
+          <div className="mt-4">
+            <OnboardingProgress currentStep={1} />
+          </div>
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { ArrowLeft, Sparkles, Sun, Droplets, Leaf, Check } from "lucide-react"
+import { OnboardingProgress } from "@/components/onboarding-progress"
 
 const goals = [
   {
@@ -150,9 +151,9 @@ export default function GoalsStep() {
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Back</span>
           </button>
-          <p className="text-center mt-2 text-muted-foreground text-[10px] uppercase tracking-widest">
-            Step 2 of 4 • Goals Selection
-          </p>
+          <div className="mt-3">
+            <OnboardingProgress currentStep={2} />
+          </div>
         </div>
       </div>
     </div>

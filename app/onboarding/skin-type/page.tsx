@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, Check, Droplets, Sun, Wind, Layers } from "lucide-react"
+import { OnboardingProgress } from "@/components/onboarding-progress"
 
 const skinTypes = [
   {
@@ -136,9 +137,9 @@ export default function SkinTypeStep() {
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Back</span>
           </button>
-          <p className="text-center mt-2 text-muted-foreground text-[10px] uppercase tracking-widest">
-            Step 3 of 4 • Skin Type
-          </p>
+          <div className="mt-3">
+            <OnboardingProgress currentStep={3} />
+          </div>
         </div>
       </div>
     </div>
