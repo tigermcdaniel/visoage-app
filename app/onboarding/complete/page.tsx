@@ -148,7 +148,7 @@ export default function CompletePage() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => {
-              localStorage.setItem("glowtrack-onboarded", "true")
+              localStorage.setItem("visoage-onboarded", "true")
               router.push("/")
             }}
             className="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-primary-foreground rounded-full font-semibold text-sm uppercase tracking-widest shadow-lg flex items-center justify-center gap-2"
@@ -157,7 +157,7 @@ export default function CompletePage() {
             <ArrowRight className="w-4 h-4" />
           </button>
           <p className="text-center mt-3 text-muted-foreground text-[10px] uppercase tracking-widest">
-            Welcome to GlowTrack
+            Welcome to VisoAge
           </p>
         </div>
       </div>

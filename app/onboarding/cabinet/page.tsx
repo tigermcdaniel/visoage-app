@@ -53,8 +53,15 @@ export default function CabinetStep() {
   return (
     <div className="max-w-2xl mx-auto">
       {/* Progress Indicator */}
-      <div className="flex items-center justify-center gap-2 mb-8">
+      <div className="flex items-center justify-between mb-8">
+        <div className="w-16" />
         <span className="text-xs uppercase tracking-widest text-muted-foreground">Step 4 of 4</span>
+        <button
+          onClick={() => router.push("/onboarding/complete")}
+          className="text-xs uppercase tracking-widest text-primary font-semibold hover:underline"
+        >
+          Skip
+        </button>
       </div>
 
       {/* Hero */}

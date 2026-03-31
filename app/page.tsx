@@ -48,7 +48,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     // Check if user has completed onboarding
-    const onboarded = localStorage.getItem("glowtrack-onboarded")
+    const onboarded = localStorage.getItem("visoage-onboarded")
     setHasOnboarded(onboarded === "true")
   }, [])
 

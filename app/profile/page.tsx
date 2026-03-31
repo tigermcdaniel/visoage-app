@@ -31,7 +31,7 @@ export default function ProfilePage() {
   const maxScore = Math.max(...skinJourneyData.map(d => d.score))
 
   const handleLogout = () => {
-    localStorage.removeItem("glowtrack-onboarded")
+    localStorage.removeItem("visoage-onboarded")
     router.push("/")
   }
 

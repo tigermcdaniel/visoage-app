@@ -17,14 +17,14 @@ const newsreader = Newsreader({
 })
 
 export const metadata: Metadata = {
-  title: 'GlowTrack',
+  title: 'VisoAge',
   description: 'AI-powered skin analysis that evolves with your routine',
   generator: 'v0.app',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'GlowTrack',
+    title: 'VisoAge',
   },
   icons: {
     icon: '/icon.svg',

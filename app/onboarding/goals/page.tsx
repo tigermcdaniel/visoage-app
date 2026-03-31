@@ -55,8 +55,15 @@ export default function GoalsStep() {
   return (
     <div className="max-w-2xl mx-auto">
       {/* Progress Indicator */}
-      <div className="flex items-center justify-center gap-2 mb-8">
+      <div className="flex items-center justify-between mb-8">
+        <div className="w-16" />
         <span className="text-xs uppercase tracking-widest text-muted-foreground">Step 2 of 4</span>
+        <button
+          onClick={() => router.push("/onboarding/skin-type")}
+          className="text-xs uppercase tracking-widest text-primary font-semibold hover:underline"
+        >
+          Skip
+        </button>
       </div>
 
       {/* Hero */}

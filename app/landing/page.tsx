@@ -12,7 +12,7 @@ export default function LandingPage() {
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary" />
-            <span className="text-2xl font-serif italic tracking-tight text-primary">GlowTrack</span>
+            <span className="text-2xl font-serif italic tracking-tight text-primary">VisoAge</span>
           </div>
           <Link 
             href="/onboarding/scan"
@@ -45,7 +45,7 @@ export default function LandingPage() {
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-muted">
+              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-muted relative">
                 <Image
                   src="/images/hero-skin.jpg"
                   alt="Radiant skin"
@@ -155,9 +155,9 @@ export default function LandingPage() {
       <footer className="w-full py-10 px-6 bg-muted border-t border-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
           <div className="flex flex-col gap-3 text-center md:text-left">
-            <span className="text-lg font-serif italic text-primary">GlowTrack</span>
+            <span className="text-lg font-serif italic text-primary">VisoAge</span>
             <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
-              2024 GlowTrack Luminous Laboratory. All rights reserved.
+              2024 VisoAge Luminous Laboratory. All rights reserved.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-6">

@@ -14,7 +14,7 @@ export default function OnboardingLayout({
         <div className="flex justify-center items-center px-6 py-4">
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary" />
-            <span className="text-2xl font-serif italic tracking-tight text-primary">GlowTrack</span>
+            <span className="text-2xl font-serif italic tracking-tight text-primary">VisoAge</span>
           </div>
         </div>
       </header>

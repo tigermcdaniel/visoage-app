@@ -25,7 +25,7 @@ export function Header({ showProfile = true }: HeaderProps) {
             </div>
           )}
           <span className="font-serif italic text-2xl text-primary">
-            GlowTrack
+            VisoAge
           </span>
         </div>
         <Button
