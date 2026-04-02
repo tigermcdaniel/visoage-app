@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: 'VisoAge',
-  description: 'AI-powered skin analysis that evolves with your routine',
+  description: 'Skin analysis that evolves with your routine',
   generator: 'v0.app',
   manifest: '/manifest.json',
   appleWebApp: {
