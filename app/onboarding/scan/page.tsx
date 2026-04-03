@@ -42,7 +42,7 @@ export default function ScanStep() {
     stopCamera()
     setIsAnalyzing(true)
     
-    // Simulate AI analysis
+    // Simulate analysis
     setTimeout(() => {
       setIsAnalyzing(false)
       setAnalysisComplete(true)
@@ -79,7 +79,7 @@ export default function ScanStep() {
           Your First <span className="italic text-primary">Skin Scan</span>
         </h1>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Position your face in the frame. Our AI will analyze your skin&apos;s unique characteristics.
+          Position your face in the frame. We&apos;ll analyze your skin&apos;s unique characteristics.
         </p>
       </section>
 
@@ -139,7 +139,7 @@ export default function ScanStep() {
               </div>
               <div className="text-center">
                 <p className="font-serif text-2xl text-foreground mb-2">Analyzing...</p>
-                <p className="text-sm text-muted-foreground">Our AI is examining 50+ bio-markers</p>
+                <p className="text-sm text-muted-foreground">Examining 50+ bio-markers</p>
               </div>
               <div className="w-48 h-1 bg-muted rounded-full overflow-hidden">
                 <div className="h-full bg-primary rounded-full animate-[loading_3s_ease-in-out]" 

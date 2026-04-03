@@ -29,7 +29,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="z-10">
               <span className="inline-block py-1 px-3 mb-5 rounded-full bg-primary-fixed text-primary text-xs font-sans tracking-widest uppercase">
-                Clinical AI Diagnostics
+                Clinical Skin Diagnostics
               </span>
               <h1 className="font-serif text-5xl md:text-6xl text-foreground leading-tight mb-6">
                 Find out your <span className="italic text-primary">skin age</span> for free.
@@ -66,7 +66,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
             <div className="flex items-center gap-3 text-muted-foreground mb-3">
               <Shield className="w-5 h-5 text-primary" />
-              <span className="text-xs uppercase tracking-widest font-sans">Clinical-Grade AI Diagnostics</span>
+              <span className="text-xs uppercase tracking-widest font-sans">Clinical-Grade Skin Diagnostics</span>
             </div>
             <div className="h-px w-24 bg-border" />
           </div>
@@ -87,7 +87,7 @@ export default function LandingPage() {
                 <div className="w-14 h-14 mb-6 rounded-2xl bg-muted flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <FlaskConical className="w-7 h-7" />
                 </div>
-                <h3 className="font-serif text-2xl mb-3">AI Skin Analysis</h3>
+                <h3 className="font-serif text-2xl mb-3">Skin Analysis</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                   Instantly receive your biological skin age, comprehensive health score, and deep molecular insights.
                 </p>
